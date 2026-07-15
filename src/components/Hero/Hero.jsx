@@ -35,7 +35,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
-            <div className="inline-flex items-center gap-3 rounded-full border border-amber-400/30 bg-white/10 px-5 py-2 backdrop-blur-3xl">
+            <div className="inline-flex items-center gap-3 rounded-full border border-amber-400/30 bg-white/10 px-5 py-2 mt-8 backdrop-blur-3xl">
               <BadgeCheck className="text-amber-400" size={18} />
               <span className="text-sm text-white">
                 Trusted Chartered Accountant Firm

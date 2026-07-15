@@ -15,12 +15,12 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${assets.hero_bg})`,
+          backgroundImage: `url(${assets.hero_img_bg})`,
         }}
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/10 via-slate-900/20 to-slate-900/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-900/20 to-slate-900/30" />
 
       {/* Blur Effects */}
       <div className="absolute -left-20 top-20 h-80 w-80 rounded-full bg-amber-400/20 blur-[120px]" />
@@ -49,7 +49,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-300">
+            <p className="mt-8 max-w-xl text-xl leading-8 text-white font-semibold">
               M Ghosh & Co., Chartered Accountants provides professional Audit,
               Taxation, GST, FCRA, Company Law and Financial Advisory services
               with integrity, expertise and excellence.
@@ -72,25 +72,6 @@ const Hero = () => {
                 Contact Us
               </Link>
             </div>
-
-            {/* Statistics */}
-
-            <div className="mt-14 grid grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-4xl font-bold text-amber-400">40+</h3>
-                <p className="mt-2 text-gray-400">Companies Audited</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-bold text-amber-400">10+</h3>
-                <p className="mt-2 text-gray-400">NGO Clients</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-bold text-amber-400">12+</h3>
-                <p className="mt-2 text-gray-400">Years Experience</p>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Side */}
@@ -101,29 +82,6 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="relative hidden lg:block"
           >
-            <div className="rounded-3xl border border-white/10 bg-white/10 p-10 backdrop-blur-2xl">
-              <h2 className="text-3xl font-bold text-white">Why Choose Us?</h2>
-
-              <div className="mt-8 space-y-6">
-                {[
-                  "Statutory & Internal Audit",
-                  "GST & Income Tax Consultancy",
-                  "FCRA Compliance",
-                  "Corporate Law Advisory",
-                  "International Accounting",
-                  "NGO Compliance",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-4">
-                    <div className="rounded-full bg-amber-800/10 p-2">
-                      <ShieldCheck className="text-amber-200" size={20} />
-                    </div>
-
-                    <span className="text-gray-100">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Floating Card */}
 
             <motion.div
@@ -135,29 +93,10 @@ const Hero = () => {
                 duration: 4,
               }}
               className="absolute -right-6 top-8 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
-            >
-              <h3 className="text-5xl font-black text-amber-400">100%</h3>
-
-              <p className="mt-2 text-white">Client Satisfaction</p>
-            </motion.div>
+            ></motion.div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-
-      <motion.div
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 1.5,
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <ChevronDown className="text-white" size={36} />
-      </motion.div>
     </section>
   );
 };

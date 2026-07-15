@@ -89,7 +89,7 @@ const services = [
 
 const ServicesShowcase = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-t from-white via-white-500 to-gray-300 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-t from-white via-gray-500 to-slate-400 py-24">
       {/* Background Glow */}
       <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-300/20 blur-[150px]" />
 

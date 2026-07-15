@@ -30,7 +30,7 @@ const highlights = [
 
 const AboutPreview = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-linear-to-br from-white via-amber-100 to-yellow-100 py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}

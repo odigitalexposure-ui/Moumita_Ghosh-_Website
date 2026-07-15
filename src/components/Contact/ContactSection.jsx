@@ -35,8 +35,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-slate-100 via-gray-400 to-blue-400 py-24 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20">
+    <section className="bg-gradient-to-br from-slate-300 via-gray-400 to-blue-400 py-24 overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-20 mt-20">
         {/* Heading */}
 
         <motion.div
@@ -46,7 +46,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="uppercase tracking-[5px] font-semibold text-cyan-600">
+          <span className="uppercase tracking-[5px] text-3xl font-semibold text-blue-600">
             Contact Us
           </span>
 
@@ -54,7 +54,7 @@ const ContactSection = () => {
             Let's Connect
           </h2>
 
-          <p className="mt-5 max-w-2xl mx-auto text-slate-600 leading-8">
+          <p className="mt-5 max-w-2xl mx-auto text-black text-xl leading-8">
             Whether you need expert advice on Taxation, Audit, Company
             Registration, GST or Financial Consulting, we're always ready to
             help.
@@ -175,7 +175,7 @@ const ContactSection = () => {
                 required
                 value={form.name}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-slate-200 px-5 py-4 outline-none focus:border-cyan-500"
+                className="w-full rounded-xl border border-slate-500 px-5 py-4 outline-none focus:border-cyan-700"
               />
 
               <input
@@ -185,7 +185,7 @@ const ContactSection = () => {
                 required
                 value={form.phone}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-slate-200 px-5 py-4 outline-none focus:border-cyan-500"
+                className="w-full rounded-xl border border-slate-500 px-5 py-4 outline-none focus:border-cyan-700"
               />
 
               <textarea
@@ -195,7 +195,7 @@ const ContactSection = () => {
                 required
                 value={form.address}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-slate-200 px-5 py-4 outline-none focus:border-cyan-500"
+                className="w-full rounded-xl border border-slate-500 px-5 py-4 outline-none focus:border-cyan-700"
               />
 
               <button className="flex w-full items-center justify-center gap-3 rounded-xl bg-cyan-600 py-4 font-semibold text-white transition hover:bg-slate-900">

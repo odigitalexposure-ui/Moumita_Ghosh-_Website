@@ -8,167 +8,169 @@ import {
   Scale,
   Handshake,
   ArrowRight,
+  Phone,
 } from "lucide-react";
 
 const features = [
   {
     icon: ShieldCheck,
-    title: "Trusted Expertise",
+    title: "12+ Years Verified Expertise",
     description:
-      "Professional accounting, audit and taxation services with complete integrity and compliance.",
+      "Fellow Chartered Accountant (FCA) & Company Secretary led advisory ensuring absolute precision in statutory and financial compliance.",
   },
   {
     icon: Clock3,
-    title: "Timely Compliance",
+    title: "Timely Statutory Filings",
     description:
-      "Ensuring all statutory filings and regulatory deadlines are met without delays.",
+      "Rigorous calendar management ensuring all statutory audit reports, tax filings, and ROC submissions are executed well ahead of deadlines.",
   },
   {
     icon: Users,
-    title: "Client-Centric Approach",
+    title: "100+ Audits Globally",
     description:
-      "Every client receives personalized financial guidance based on their business goals.",
+      "Extensive experience conducting statutory and internal audits for domestic corporations, LLPs, and international entities across diverse sectors.",
   },
   {
     icon: BriefcaseBusiness,
-    title: "Business Advisory",
+    title: "International Accounting Support",
     description:
-      "Helping businesses make informed financial decisions for sustainable growth.",
+      "Hands-on expertise in US Form 1120/1040 preparation, global bookkeeping, and cloud ERP systems including QuickBooks and Odoo.",
   },
   {
     icon: Scale,
-    title: "Ethical Practices",
+    title: "50+ NGOs & Trusts Empowered",
     description:
-      "Maintaining transparency, confidentiality and the highest professional standards.",
+      "Deep specialization in non-profit statutory audits, Section 12A/80G compliance, and FCRA-related audit and reporting frameworks.",
   },
   {
     icon: Handshake,
-    title: "Long-Term Relationships",
+    title: "End-to-End Statutory Compliance",
     description:
-      "Building trusted partnerships through consistent quality and dedicated support.",
+      "Proactive PF, ESI, and Professional Tax (P.Tax) consultancy protecting employers from statutory penalties and liabilities.",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-amber-50 to-yellow-100 py-24">
-      {/* Background Blur Effects */}
-
-      <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-amber-300/30 blur-[120px]" />
-
-      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-yellow-300/20 blur-[150px]" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#F1EDFF] via-[#FAF8FF] to-[#F1EDFF] py-24">
+      {/* Ambient background glows */}
+      <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-purple-200/30 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-amber-200/25 blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
-
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <span className="inline-flex rounded-full border border-amber-400/30 bg-white/70 px-5 py-2 text-sm font-semibold uppercase tracking-wider text-amber-700 backdrop-blur-xl">
-            Why Choose Us
+          <span className="inline-flex rounded-full border border-sky-200 bg-white/90 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#12345B] shadow-xs">
+            Why Choose M Ghosh & Co.
           </span>
 
-          <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900 md:text-5xl">
+          <h2 className="mt-5 text-3xl font-black leading-tight text-[#12345B] md:text-5xl">
             Your Trusted Partner For
-            <span className="block bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
-              Financial Excellence
+            <span className="block bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
+              Audit, Tax & Compliance Excellence
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            We combine technical expertise, professional ethics and personalized
-            advisory services to help businesses, NGOs and individuals achieve
-            financial stability, regulatory compliance and sustainable growth.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 leading-relaxed">
+            We combine high-level technical capability, strict ethical independence,
+            and tech-enabled workflows to safeguard your business and accelerate
+            sustainable growth.
           </p>
         </motion.div>
-        {/* Feature Cards */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {/* Feature Cards */}
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 60 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.15,
+                  duration: 0.5,
+                  delay: index * 0.1,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/60 bg-white/70 p-8 backdrop-blur-xl shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-amber-300 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl"
               >
                 {/* Icon */}
-
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg transition duration-300 group-hover:scale-110">
-                  <Icon size={30} />
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-[#12345B] shadow-xs transition duration-300 group-hover:bg-amber-400 group-hover:text-slate-950 group-hover:scale-105">
+                  <Icon size={26} />
                 </div>
 
                 {/* Title */}
-
-                <h3 className="text-2xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold text-[#12345B]">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-
-                <p className="mt-4 leading-8 text-slate-600">
+                <p className="mt-3 text-xs leading-relaxed text-slate-600">
                   {feature.description}
                 </p>
 
-                {/* Hover Line */}
-
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-500 group-hover:w-full"></div>
+                {/* Accent line on hover */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-amber-400 to-yellow-500 transition-all duration-500 group-hover:w-full" />
               </motion.div>
             );
           })}
         </div>
-        {/* Bottom CTA */}
 
+        {/* Bottom Callout Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative mt-24 overflow-hidden rounded-[32px] bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 px-8 py-14 shadow-2xl lg:px-16"
+          transition={{ duration: 0.7 }}
+          className="relative mt-20 overflow-hidden rounded-[32px] bg-gradient-to-r from-slate-950 via-slate-900 to-[#12345B] px-8 py-12 shadow-2xl lg:px-14"
         >
-          {/* Glow */}
-          <div className="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-amber-400/20 blur-[100px]" />
-          <div className="absolute -right-10 bottom-0 h-60 w-60 rounded-full bg-yellow-400/10 blur-[120px]" />
+          <div className="absolute -left-16 -top-16 h-48 w-48 rounded-full bg-amber-400/20 blur-[100px] pointer-events-none" />
+          <div className="absolute -right-10 bottom-0 h-60 w-60 rounded-full bg-sky-400/10 blur-[120px] pointer-events-none" />
 
-          <div className="relative z-10 flex flex-col items-center justify-between gap-10 lg:flex-row">
+          <div className="relative z-10 flex flex-col items-center justify-between gap-8 lg:flex-row">
             <div>
-              <span className="rounded-full bg-amber-400/20 px-4 py-2 text-sm font-semibold text-amber-300">
-                Ready to Get Started?
+              <span className="rounded-full bg-amber-400/20 px-3.5 py-1 text-xs font-bold text-amber-300">
+                Direct Professional Access
               </span>
 
-              <h3 className="mt-5 text-3xl font-black text-white md:text-4xl">
-                Let's Discuss Your Financial Goals
+              <h3 className="mt-3 text-2xl font-black text-white md:text-3xl">
+                Ready to Discuss Your Financial Architecture?
               </h3>
 
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
-                Whether you need audit services, taxation support, GST
-                compliance, company law advisory or FCRA consultancy, we're here
-                to provide practical and reliable financial solutions tailored
-                to your needs.
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-300">
+                Whether you need statutory audit services, international taxation
+                guidance, PF/ESI consultancy, or company law advisory, our senior
+                consultants are available for personalized consultation.
               </p>
             </div>
 
-            <Link
-              to="/contact"
-              className="group inline-flex items-center rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 px-8 py-4 font-semibold text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-500/30"
-            >
-              Book Consultation
-              <ArrowRight
-                size={20}
-                className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center rounded-xl bg-amber-400 px-6 py-3.5 text-xs font-extrabold uppercase tracking-wider text-slate-950 transition-all duration-300 hover:bg-amber-500 hover:scale-105 shadow-md"
+              >
+                Book Consultation
+                <ArrowRight
+                  size={16}
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
+
+              <a
+                href="tel:8240784998"
+                className="inline-flex items-center rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 text-xs font-bold text-white backdrop-blur-md transition hover:bg-white/20 hover:border-amber-400"
+              >
+                <Phone size={14} className="mr-1.5 text-amber-400" />
+                8240784998
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

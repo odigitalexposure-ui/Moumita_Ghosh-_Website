@@ -2,10 +2,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
-import Footer from "./components/Footer/Footer";
 import About from "./pages/About";
-import ServicesShowcase from "./components/ServicesShowcase/ServicesShowcase";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
@@ -16,13 +16,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
-
-        <Route path="/services" element={<ServicesShowcase />} />
-
+        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );

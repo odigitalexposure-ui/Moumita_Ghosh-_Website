@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Phone,
-  ShieldCheck,
-  BadgeCheck,
-  ChevronDown,
-} from "lucide-react";
+import { ArrowRight, Phone, BadgeCheck, Building2, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -19,81 +14,135 @@ const Hero = () => {
         }}
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-900/20 to-slate-900/30" />
+      {/* Dark Gradient Overlay for Maximum Readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-950/60" />
 
-      {/* Blur Effects */}
-      <div className="absolute -left-20 top-20 h-80 w-80 rounded-full bg-amber-400/20 blur-[120px]" />
-      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/20 blur-[140px]" />
+      {/* Ambient Blur Effects */}
+      <div className="absolute -left-20 top-20 h-96 w-96 rounded-full bg-amber-400/20 blur-[130px] pointer-events-none" />
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-sky-500/20 blur-[140px] pointer-events-none" />
 
-      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-6">
-        <div className="grid w-full items-center gap-14 lg:grid-cols-2 mt-20">
-          {/* Left Content */}
-
+      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-6 pt-24 pb-16">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-12">
+          {/* Left Hero Content */}
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-7"
           >
-            <div className="inline-flex items-center gap-3 rounded-full border border-amber-400/30 bg-white/10 px-5 py-2 mt-8 backdrop-blur-3xl">
-              <BadgeCheck className="text-amber-400" size={18} />
-              <span className="text-sm text-white">
-                Trusted Chartered Accountant Firm
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-amber-400/40 bg-white/10 px-4 py-1.5 backdrop-blur-xl">
+              <BadgeCheck className="text-amber-400" size={16} />
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-200">
+                12+ Years Experience | Chartered Accountants
               </span>
             </div>
 
-            <h1 className="mt-8 text-5xl font-black leading-tight text-white md:text-7xl">
+            <h1 className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
               Financial Excellence
               <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Beyond Numbers
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-xl leading-8 text-white font-semibold">
-              M Ghosh & Co., Chartered Accountants provides professional Audit,
-              Taxation, GST, FCRA, Company Law and Financial Advisory services
-              with integrity, expertise and excellence.
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
+              M Ghosh & Co. provides trusted Statutory & Internal Audits,
+              International Accounting (US Form 1120/1040, QuickBooks, Odoo),
+              PF, ESI & Professional Tax Consultancy, and Corporate Advisory
+              with uncompromising integrity and precision.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-5">
+            {/* Action Buttons */}
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                className="group rounded-xl bg-amber-400 px-7 py-4 font-semibold text-slate-900 transition duration-300 hover:scale-105"
+                className="group rounded-xl bg-amber-400 px-7 py-3.5 text-sm font-extrabold uppercase tracking-wider text-slate-950 shadow-lg transition duration-300 hover:bg-amber-500 hover:scale-105"
               >
                 Book Consultation
-                <ArrowRight className="ml-2 inline transition group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 inline transition group-hover:translate-x-1" size={16} />
               </Link>
 
-              <Link
-                to="/contact"
-                className="rounded-xl border border-white/20 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-xl transition hover:bg-white/20"
+              <a
+                href="tel:8240784998"
+                className="rounded-xl border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-xl transition hover:bg-white/20 hover:border-amber-400"
               >
-                <Phone className="mr-2 inline" size={18} />
-                Contact Us
-              </Link>
+                <Phone className="mr-2 inline text-amber-400" size={15} />
+                Call 8240784998
+              </a>
+
+              <a
+                href="tel:9831996673"
+                className="rounded-xl border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-xl transition hover:bg-white/20 hover:border-amber-400"
+              >
+                <Phone className="mr-2 inline text-amber-400" size={15} />
+                9831996673
+              </a>
+            </div>
+
+            {/* Quick Hero Trust Strip */}
+            <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/15 pt-6 max-w-lg">
+              <div>
+                <span className="text-2xl font-black text-amber-400 md:text-3xl">12+</span>
+                <p className="text-xs text-slate-300">Years Exp.</p>
+              </div>
+              <div>
+                <span className="text-2xl font-black text-amber-400 md:text-3xl">100+</span>
+                <p className="text-xs text-slate-300">Companies Audited</p>
+              </div>
+              <div>
+                <span className="text-2xl font-black text-amber-400 md:text-3xl">50+</span>
+                <p className="text-xs text-slate-300">NGOs Served</p>
+              </div>
             </div>
           </motion.div>
 
-          {/* Right Side */}
-
+          {/* Right Floating Badge Cards */}
           <motion.div
-            initial={{ opacity: 0, x: 120 }}
+            initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            className="relative hidden lg:block"
+            transition={{ duration: 0.9 }}
+            className="hidden lg:block lg:col-span-5"
           >
-            {/* Floating Card */}
+            <div className="relative space-y-5">
+              <motion.div
+                animate={{ y: [-6, 6, -6] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-2xl shadow-2xl"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400 text-slate-950 font-black shadow-md">
+                    <Globe2 size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white">
+                      Global Accounting & Audits
+                    </h3>
+                    <p className="text-xs text-slate-300">
+                      US Tax (Form 1120/1040), QuickBooks, Odoo & Cross-Border Advisory
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
 
-            <motion.div
-              animate={{
-                y: [-10, 10, -10],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-              }}
-              className="absolute -right-6 top-8 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
-            ></motion.div>
+              <motion.div
+                animate={{ y: [6, -6, 6] }}
+                transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+                className="ml-8 rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-2xl shadow-2xl"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500 text-white font-black shadow-md">
+                    <Building2 size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white">
+                      Comprehensive Assurance
+                    </h3>
+                    <p className="text-xs text-slate-300">
+                      Statutory, Internal, Company, LLP & NGO Audits
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

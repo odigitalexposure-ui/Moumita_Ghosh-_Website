@@ -2,166 +2,164 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  FileSearch,
-  Receipt,
-  Landmark,
-  Building2,
+  FileCheck2,
   Globe2,
-  BriefcaseBusiness,
+  Users2,
+  Receipt,
+  Building2,
+  ShieldCheck,
 } from "lucide-react";
 
 const services = [
   {
     number: "01",
-    icon: FileSearch,
-    title: "Audit & Assurance",
+    icon: FileCheck2,
+    title: "Audits & Assurance",
     description:
-      "Comprehensive statutory, internal and tax audit services that ensure transparency, compliance and financial reliability.",
+      "Comprehensive Statutory Audits, Internal Audits, Company Audits, LLP Audits, NGO & Trust Audits, Institutional Audits, and FCRA Audits ensuring complete financial accountability.",
+    tag: "Comprehensive Assurance",
   },
   {
     number: "02",
-    icon: Receipt,
-    title: "GST Consultancy",
+    icon: Globe2,
+    title: "International Accounting & Taxation",
     description:
-      "Complete GST registration, return filing, advisory and compliance services for businesses of every size.",
+      "Cross-border accounting support, US Tax preparation (Form 1120, Form 1040), global bookkeeping, and expert QuickBooks & Odoo accounting software setup.",
+    tag: "Global Support",
   },
   {
     number: "03",
-    icon: Landmark,
-    title: "Income Tax",
+    icon: Users2,
+    title: "PF, ESI & Professional Tax Consultancy",
     description:
-      "Expert tax planning, return filing and representation to optimize taxation while ensuring legal compliance.",
+      "End-to-end employer statutory compliance covering EPF registration and monthly ECR filings, ESIC management, and State Professional Tax (P.Tax) filings.",
+    tag: "Statutory Compliance",
   },
   {
     number: "04",
-    icon: Building2,
-    title: "Company Law",
+    icon: Receipt,
+    title: "GST & Direct Taxation",
     description:
-      "Professional advisory on company incorporation, ROC compliance and corporate governance matters.",
+      "Strategic tax advisory, timely GST return filing, input tax credit reconciliation, advance tax computation, and income tax representation.",
+    tag: "Tax Advisory",
   },
   {
     number: "05",
-    icon: Globe2,
-    title: "FCRA Compliance",
+    icon: ShieldCheck,
+    title: "NGO & Trust Compliance",
     description:
-      "Specialized consultancy for NGOs and charitable organizations regarding FCRA registration and compliance.",
+      "Specialized governance for non-profit entities, 12A & 80G registrations, FCRA-related audit and compliance support, and CSR grant utilization auditing.",
+    tag: "Non-Profit Advisory",
   },
   {
     number: "06",
-    icon: BriefcaseBusiness,
-    title: "Financial Advisory",
+    icon: Building2,
+    title: "Company Law & Corporate Advisory",
     description:
-      "Strategic financial consulting, business planning and advisory solutions for sustainable business growth.",
+      "Corporate structuring, ROC secretarial filings, statutory registers, and strategic financial advisory for sustainable organizational expansion.",
+    tag: "Corporate Governance",
   },
 ];
 
 const CoreServices = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-amber-50 via-white to-yellow-50 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#EAF7EF] via-[#F3FAF5] to-[#EAF7EF] py-24">
       {/* Background Glow */}
-      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-300/20 blur-[140px]" />
-
-      <div className="absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-yellow-300/20 blur-[160px]" />
-
-      {/* Decorative Circle */}
-      <div className="absolute top-28 right-16 hidden h-64 w-64 rounded-full border border-amber-200/40 lg:block" />
+      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-emerald-200/30 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-amber-200/25 blur-[160px] pointer-events-none" />
 
       {/* Main Container */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
-
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid gap-10 lg:grid-cols-2 lg:items-end"
+          transition={{ duration: 0.7 }}
+          className="grid gap-8 lg:grid-cols-2 lg:items-end"
         >
-          {/* Left Side */}
-
           <div>
-            <span className="inline-flex rounded-full bg-amber-100 px-5 py-2 text-sm font-semibold uppercase tracking-wider text-amber-700">
-              Our Core Services
+            <span className="inline-flex rounded-full bg-sky-100 border border-sky-200 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#12345B]">
+              Core Practice Areas
             </span>
 
-            <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900 md:text-5xl">
+            <h2 className="mt-5 text-3xl font-black leading-tight text-[#12345B] md:text-5xl">
               Professional Solutions
-              <span className="block bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                Tailored For Your Business
+              <span className="block bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
+                Tailored For Your Growth
               </span>
             </h2>
           </div>
 
-          {/* Right Side */}
-
-          <div className="lg:pl-16">
-            <p className="text-lg leading-8 text-slate-600">
-              We provide comprehensive accounting, taxation and compliance
-              services designed to help businesses, startups, NGOs and
-              individuals confidently manage financial responsibilities,
-              regulatory requirements and long-term growth.
+          <div className="lg:pl-10">
+            <p className="text-base leading-relaxed text-slate-600">
+              We deliver multidisciplinary accounting, auditing, taxation, and
+              compliance solutions designed to help domestic enterprises, startups,
+              NGOs, and global businesses navigate complex statutory requirements
+              with clarity and integrity.
             </p>
           </div>
         </motion.div>
 
         {/* Services Grid */}
-
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
               <motion.div
                 key={service.number}
-                initial={{ opacity: 0, y: 60 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.15,
+                  delay: index * 0.1,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-slate-100 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(251,191,36,0.25)]"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-8 shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-amber-400 hover:shadow-xl"
               >
                 {/* Animated Left Border */}
+                <div className="absolute left-0 top-0 h-full w-1.5 origin-top scale-y-0 bg-gradient-to-b from-amber-400 via-yellow-500 to-amber-600 transition-transform duration-500 group-hover:scale-y-100" />
 
-                <div className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-gradient-to-b from-amber-400 via-amber-500 to-orange-500 transition-transform duration-500 group-hover:scale-y-100" />
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-4xl font-black text-slate-200 transition duration-300 group-hover:text-amber-300">
+                      {service.number}
+                    </span>
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold text-slate-600">
+                      {service.tag}
+                    </span>
+                  </div>
 
-                {/* Service Number */}
+                  {/* Icon */}
+                  <div className="mt-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-[#12345B] shadow-xs transition duration-300 group-hover:bg-amber-400 group-hover:text-slate-950 group-hover:scale-105">
+                    <Icon size={26} />
+                  </div>
 
-                <span className="text-6xl font-black text-slate-100 transition duration-300 group-hover:text-amber-100">
-                  {service.number}
-                </span>
+                  {/* Title */}
+                  <h3 className="mt-6 text-xl font-bold leading-tight text-[#12345B]">
+                    {service.title}
+                  </h3>
 
-                {/* Icon */}
-
-                <div className="mt-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 text-white shadow-lg transition duration-300 group-hover:rotate-6 group-hover:scale-110">
-                  <Icon size={28} />
+                  {/* Description */}
+                  <p className="mt-3 text-xs leading-relaxed text-slate-600">
+                    {service.description}
+                  </p>
                 </div>
 
-                {/* Title */}
-
-                <h3 className="mt-7 text-2xl font-bold leading-tight text-slate-900">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-
-                <p className="mt-4 leading-8 text-slate-600">
-                  {service.description}
-                </p>
-
                 {/* Learn More */}
-
-                <Link
-                  to="/services"
-                  className="mt-8 inline-flex items-center font-semibold text-amber-600 transition duration-300 group-hover:text-orange-500"
-                >
-                  Learn More
-                  <ArrowRight
-                    size={18}
-                    className="ml-2 transition-transform duration-300 group-hover:translate-x-2"
-                  />
-                </Link>
+                <div className="mt-7 pt-4 border-t border-slate-100">
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#0B5D4B] transition duration-300 hover:text-amber-600"
+                  >
+                    Explore Details
+                    <ArrowRight
+                      size={14}
+                      className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1.5"
+                    />
+                  </Link>
+                </div>
               </motion.div>
             );
           })}

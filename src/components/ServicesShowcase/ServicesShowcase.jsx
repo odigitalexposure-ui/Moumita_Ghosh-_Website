@@ -1,257 +1,272 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 import {
-  ArrowRight,
-  FileSearch,
   Receipt,
-  Landmark,
   Building2,
-  Globe2,
   BriefcaseBusiness,
-  Scale,
   ShieldCheck,
+  Phone,
+  ArrowRight,
 } from "lucide-react";
+import AuditsSection from "../Audits/AuditsSection";
+import InternationalAccounting from "../International/InternationalAccounting";
+import StatutoryPayroll from "../Compliance/StatutoryPayroll";
 
-const services = [
+const additionalServices = [
   {
-    id: "statutory-audit",
-    number: "01",
-    icon: FileSearch,
-    title: "Statutory Audit",
-    description:
-      "Comprehensive statutory and compliance audits ensuring financial transparency and regulatory confidence.",
-  },
-
-  {
-    id: "taxation",
-    number: "02",
+    id: "taxation-gst",
     icon: Receipt,
-    title: "Taxation",
+    title: "GST & Direct Taxation",
+    category: "Tax Advisory",
     description:
-      "GST, Income Tax, TDS, Corporate Tax and strategic tax planning for businesses and individuals.",
+      "Strategic tax planning, timely GST return filing, input tax credit reconciliation, Advance Tax computations, and representation before authorities.",
+    features: [
+      "GST registration & monthly returns",
+      "Corporate & individual income tax",
+      "TDS quarterly compliance & certificates",
+    ],
   },
-
   {
-    id: "company-law",
-    number: "03",
-    icon: Building2,
-    title: "Company Law",
-    description:
-      "Company registration, ROC compliance, governance and legal corporate advisory services.",
-  },
-
-  {
-    id: "fcra",
-    number: "04",
-    icon: Globe2,
-    title: "FCRA Services",
-    description:
-      "Registration, renewal, FC-4 filing and complete foreign contribution compliance support.",
-  },
-
-  {
-    id: "ngo",
-    number: "05",
+    id: "ngo-trust",
     icon: ShieldCheck,
-    title: "NGO & Trust",
+    title: "NGO & Trust Compliance",
+    category: "Non-Profit Governance",
     description:
-      "Registration, 12A, 80G, Trust Audit, CSR compliance and legal advisory services.",
+      "Comprehensive regulatory advisory for charitable institutions, Section 12A / 80G registrations, Form 10B/10BB filings, and donor compliance.",
+    features: [
+      "Trust & Society incorporation",
+      "12A and 80G tax exemptions",
+      "CSR project compliance monitoring",
+    ],
   },
-
   {
-    id: "financial",
-    number: "06",
+    id: "corporate-compliance",
+    icon: Building2,
+    title: "Corporate Law & ROC Filings",
+    category: "Corporate Governance",
+    description:
+      "Secretarial and statutory advisory under the Companies Act, annual ROC filings, corporate structuring, minutes maintenance, and board disclosures.",
+    features: [
+      "Company & LLP incorporation",
+      "Annual ROC return filing (AOC-4, MGT-7)",
+      "Statutory registers & secretarial compliance",
+    ],
+  },
+  {
+    id: "financial-advisory",
     icon: BriefcaseBusiness,
-    title: "Financial Consultancy",
+    title: "Financial & Business Advisory",
+    category: "Strategic Growth",
     description:
-      "Business planning, financial advisory, international accounting and growth consulting.",
-  },
-
-  {
-    id: "international",
-    number: "07",
-    icon: Landmark,
-    title: "International Accounting",
-    description:
-      "QuickBooks, Odoo, foreign taxation and accounting solutions for global businesses.",
-  },
-
-  {
-    id: "corporate",
-    number: "08",
-    icon: Scale,
-    title: "Corporate Governance",
-    description:
-      "Agreement drafting, compliance management and governance solutions for organizations.",
+      "Pragmatic financial consulting, budget forecasting, capital expenditure evaluations, and working capital optimization for emerging businesses.",
+    features: [
+      "Project report preparation",
+      "Financial health & variance analysis",
+      "Cash flow & working capital strategy",
+    ],
   },
 ];
 
 const ServicesShowcase = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-t from-white via-gray-500 to-slate-400 py-24">
-      {/* Background Glow */}
-      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-300/20 blur-[150px]" />
+    <div className="overflow-hidden">
+      {/* Top Hero Banner */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-[#12345B] pt-32 pb-24 text-white">
+        <div className="absolute top-10 left-10 h-80 w-80 rounded-full bg-amber-400/10 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 right-10 h-96 w-96 rounded-full bg-sky-500/10 blur-[150px] pointer-events-none" />
 
-      <div className="absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-yellow-300/20 blur-[170px]" />
-
-      {/* Decorative Circle */}
-      <div className="absolute right-10 top-24 hidden h-72 w-72 rounded-full border border-amber-200/40 lg:block" />
-
-      {/* Main Container */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section Header */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid gap-12 lg:grid-cols-2 lg:items-end"
-        >
-          {/* Left */}
-
-          <div>
-            <span className="inline-flex rounded-full bg-amber-100 px-5 py-2 text-sm font-semibold uppercase tracking-wider text-amber-700">
-              Professional Services
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-white/10 px-5 py-2 text-xs font-bold uppercase tracking-widest text-amber-300 backdrop-blur-md">
+              Full-Spectrum Professional Advisory
             </span>
 
-            <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900 md:text-6xl">
-              Solutions Built
-              <span className="block bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                Around Your Success
+            <h1 className="mt-6 text-4xl font-black tracking-tight text-white md:text-6xl">
+              Professional Services Built for
+              <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                Confidence & Compliance
               </span>
-            </h2>
-          </div>
+            </h1>
 
-          {/* Right */}
-
-          <div className="lg:pl-12">
-            <p className="text-lg leading-9 text-slate-600">
-              Whether you're a startup, established business, NGO, trust or
-              multinational organization, M Ghosh & Co. delivers professional
-              financial, taxation, audit, compliance and advisory services
-              tailored to your goals.
+            <p className="mt-6 text-base leading-relaxed text-slate-300 md:text-lg">
+              From statutory audits and global US tax returns (Form 1120/1040)
+              to PF, ESI, and Professional Tax compliance, M Ghosh & Co. delivers
+              certified, reliable financial solutions tailored to your organization.
             </p>
-          </div>
-        </motion.div>
 
-        {/* Services Grid will come here */}
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-2">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-
-            return (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
+            {/* Quick Service Anchor Navigation */}
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a
+                href="#audits-assurance"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:bg-amber-400 hover:text-slate-950"
               >
-                <Link
-                  to={`/services/${service.id}`}
-                  className="group relative flex h-full overflow-hidden rounded-3xl border border-amber-100 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-amber-300 hover:shadow-[0_20px_60px_rgba(251,191,36,0.25)]"
-                >
-                  {/* Left Accent Line */}
-                  <div className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-gradient-to-b from-amber-400 via-orange-500 to-yellow-400 transition-transform duration-500 group-hover:scale-y-100" />
-
-                  {/* Large Number */}
-                  <div className="mr-8 flex-shrink-0">
-                    <span className="text-6xl font-black text-slate-100 transition duration-300 group-hover:text-amber-200">
-                      {service.number}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    {/* Icon */}
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 text-white shadow-lg transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
-                      <Icon size={30} />
-                    </div>
-                    {/* Title */}
-                    <h3 className="mt-6 text-2xl font-bold text-slate-900">
-                      {service.title}
-                    </h3>
-                    {/* Description */}
-                    <p className="mt-4 leading-8 text-slate-600">
-                      {service.description}
-                    </p>
-                    {/* Learn More */}
-                    <div className="mt-8 inline-flex items-center font-semibold text-amber-600 transition duration-300 group-hover:text-orange-500">
-                      {/* Explore Service */}
-                      {/* <ArrowRight
-                        size={18}
-                        className="ml-2 transition-transform duration-300 group-hover:translate-x-2"
-                      /> */}
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
+                Audits & Assurance
+              </a>
+              <a
+                href="#international-accounting"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:bg-amber-400 hover:text-slate-950"
+              >
+                International Accounting & Tax
+              </a>
+              <a
+                href="#pf-esi-ptax"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:bg-amber-400 hover:text-slate-950"
+              >
+                PF, ESI & P.Tax Consultancy
+              </a>
+              <a
+                href="#corporate-taxation"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:bg-amber-400 hover:text-slate-950"
+              >
+                Taxation & Governance
+              </a>
+            </div>
+          </motion.div>
         </div>
+      </section>
 
-        {/* CTA Banner */}
+      {/* 1. MAJOR EXPANDED AUDITS & ASSURANCE SECTION */}
+      <AuditsSection />
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-24 overflow-hidden rounded-[32px] bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 p-10 shadow-[0_25px_80px_rgba(0,0,0,.35)] lg:p-14"
-        >
-          <div className="grid items-center gap-10 lg:grid-cols-[2fr_1fr]">
-            {/* Left Content */}
+      {/* 2. DEDICATED INTERNATIONAL ACCOUNTING & TAXATION */}
+      <InternationalAccounting />
 
+      {/* 3. DEDICATED PF, ESI & PROFESSIONAL TAX (P.TAX) CONSULTANCY */}
+      <StatutoryPayroll />
+
+      {/* 4. ADDITIONAL CORE SERVICES: TAXATION, NGO, CORPORATE LAW, ADVISORY */}
+      <section
+        id="corporate-taxation"
+        className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-indigo-50/30 py-24"
+      >
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/90 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#12345B] shadow-xs">
+              Comprehensive Coverage
+            </span>
+
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-[#12345B] md:text-4xl">
+              Taxation, Governance & Non-Profit Services
+            </h2>
+
+            <p className="mt-3 text-base text-slate-600">
+              Targeted legal and regulatory solutions for enterprises, trusts, and
+              charities.
+            </p>
+          </motion.div>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            {additionalServices.map((srv, index) => {
+              const Icon = srv.icon;
+              return (
+                <motion.div
+                  key={srv.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-400 hover:shadow-xl"
+                >
+                  <div>
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-[#12345B] shadow-xs transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-slate-950">
+                      <Icon size={28} />
+                    </div>
+
+                    <span className="mt-5 block text-xs font-bold uppercase tracking-wider text-amber-600">
+                      {srv.category}
+                    </span>
+
+                    <h3 className="mt-2 text-2xl font-bold text-[#12345B]">
+                      {srv.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                      {srv.description}
+                    </p>
+
+                    <ul className="mt-5 space-y-1.5 border-t border-slate-100 pt-4">
+                      {srv.features.map((feat, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-center text-xs font-semibold text-slate-700"
+                        >
+                          <span className="mr-2 h-1.5 w-1.5 rounded-full bg-amber-500" />
+                          {feat}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-slate-100">
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#0B5D4B] transition-colors duration-200 hover:text-amber-600"
+                    >
+                      Consult Our Specialists &rarr;
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. DUAL PHONE CONSULTATION CTA */}
+      <section className="bg-gradient-to-r from-[#12345B] via-slate-900 to-[#0B5D4B] py-16 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div>
-              <span className="inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-5 py-2 text-sm font-semibold uppercase tracking-wider text-amber-300">
-                Need Professional Guidance?
+              <span className="rounded-full bg-amber-400/20 px-3.5 py-1 text-xs font-bold text-amber-300">
+                Need Fast Statutory Consultation?
               </span>
-
-              <h3 className="mt-6 text-3xl font-black leading-tight text-white md:text-5xl">
-                Let's Simplify Your
-                <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                  Financial & Compliance Journey
-                </span>
+              <h3 className="mt-3 text-2xl font-black md:text-3xl">
+                Speak Directly with Our Chartered Accountant Team
               </h3>
-
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-                Whether you need Audit, GST, Income Tax, Company Registration,
-                FCRA Compliance or Financial Advisory, our experts provide
-                practical, transparent and result-oriented solutions tailored to
-                your business needs.
+              <p className="mt-1 text-sm text-slate-300">
+                Call either of our direct lines for immediate assistance with
+                audits, international accounting, or statutory compliance.
               </p>
             </div>
 
-            {/* Right Buttons */}
-
-            <div className="flex flex-col gap-4 lg:items-end">
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="tel:8240784998"
+                className="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-5 py-3 text-xs font-black uppercase tracking-wider text-slate-950 shadow-md transition hover:bg-amber-500 hover:scale-105"
+              >
+                <Phone size={14} />
+                8240784998
+              </a>
+              <a
+                href="tel:9831996673"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-xs font-black uppercase tracking-wider text-white backdrop-blur-md transition hover:border-amber-400 hover:bg-white/20"
+              >
+                <Phone size={14} />
+                9831996673
+              </a>
               <Link
                 to="/contact"
-                className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 px-8 py-4 font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(251,191,36,.35)]"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-white px-5 py-3 text-xs font-black uppercase tracking-wider text-[#12345B] shadow-md transition hover:bg-slate-100"
               >
-                Book Consultation
-                <ArrowRight
-                  size={18}
-                  className="ml-2 transition group-hover:translate-x-1"
-                />
-              </Link>
-
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-amber-400/40 hover:bg-white/10"
-              >
-                Know Our Firm
+                Book Online
+                <ArrowRight size={14} />
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 

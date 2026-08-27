@@ -128,8 +128,8 @@ const Navbar = () => {
             aria-label="Toggle navigation menu"
             className={`lg:hidden rounded-xl p-2.5 transition-all duration-300 ${
               scrolled
-                ? "bg-slate-100 text-slate-900 shadow-sm"
-                : "bg-white/20 backdrop-blur-md text-white border border-white/20"
+                ? "bg-slate-300 text-slate-900 shadow-sm"
+                : "bg-slate-300 text-slate-900 shadow-sm"
             }`}
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -152,7 +152,30 @@ const Navbar = () => {
               : "opacity-0 -translate-y-8 pointer-events-none"
           }`}
         >
-          <div className="overflow-hidden rounded-3xl bg-white/95 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-100 p-4">
+          <div className="overflow-hidden rounded-3xl bg-white/95 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-100 p-5">
+            {/* Mobile Dropdown Header with Cross Button */}
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+              <div className="flex items-center gap-2.5">
+                <img
+                  src={assets.m_logo1}
+                  alt="M Ghosh & Co"
+                  className="h-12 w-18 rounded-lg object-cover shadow-xs"
+                />
+                <span className="text-sm font-black text-red-700 tracking-tight">
+                  M Ghosh & Co.
+                  <br />
+                  Chattered Accountants
+                </span>
+              </div>
+              <button
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close navigation menu"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-amber-400 hover:text-slate-950 transition-colors shadow-xs"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
             <div className="space-y-1">
               {links.map((item) => (
                 <NavLink

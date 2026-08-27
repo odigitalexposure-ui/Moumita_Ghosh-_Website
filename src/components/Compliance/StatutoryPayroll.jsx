@@ -67,11 +67,11 @@ const StatutoryPayroll = () => {
   return (
     <section
       id="pf-esi-ptax"
-      className="relative overflow-hidden bg-gradient-to-b from-[#EAF7EF] via-[#F2FAF5] to-[#EAF7EF] py-24"
+      className="relative overflow-hidden bg-gradient-to-b from-emerald-50/60 via-slate-50 to-teal-50/40 py-24"
     >
       {/* Background Decorative Glow */}
-      <div className="absolute top-10 left-1/3 h-80 w-80 rounded-full bg-emerald-200/35 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-amber-200/25 blur-[120px] pointer-events-none" />
+      <div className="absolute top-10 left-1/3 h-80 w-80 rounded-full bg-emerald-200/30 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-amber-200/20 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
@@ -157,30 +157,27 @@ const StatutoryPayroll = () => {
           })}
         </div>
 
-        {/* Employer Assurance Banner with Rich Deep Green Background & White/Yellow Text */}
+        {/* Employer Assurance Banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14 rounded-3xl border border-white/20 bg-gradient-to-r from-[#0B5D4B] via-[#064E3B] to-[#12345B] p-8 shadow-xl text-white"
+          className="mt-14 rounded-3xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50/60 p-8 shadow-sm"
         >
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div>
-              <span className="text-xs font-black uppercase tracking-wider text-amber-300">
-                Employer Assurance
-              </span>
-              <h4 className="mt-1 text-xl font-bold text-white">
+              <h4 className="text-xl font-bold text-[#12345B]">
                 Ensuring Complete Employer Statutory Peace of Mind
               </h4>
-              <p className="mt-1 text-sm text-slate-200">
+              <p className="mt-1 text-sm text-slate-600">
                 Avoid penalty notices, interest liabilities, and non-compliance
                 risks with structured PF, ESI, and P.Tax filings.
               </p>
             </div>
             <Link
               to="/contact"
-              className="inline-flex shrink-0 items-center justify-center rounded-xl bg-amber-400 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-slate-950 shadow-md transition duration-300 hover:bg-yellow-300 hover:scale-105"
+              className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#0B5D4B] px-6 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-[#12345B] hover:shadow-lg"
             >
               Get Compliance Assessment
             </Link>

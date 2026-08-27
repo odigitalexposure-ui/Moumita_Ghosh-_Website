@@ -31,21 +31,27 @@ const Hero = () => {
             className="lg:col-span-7"
           >
             <div className="inline-flex items-center gap-2.5 rounded-full border border-amber-400/40 bg-white/10 px-4 py-1.5 backdrop-blur-xl">
-              <BadgeCheck className="text-amber-400" size={16} />
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-200">
+              <BadgeCheck className="text-amber-400" size={38} />
+              <span className="text-s font-bold uppercase tracking-wider text-amber-200">
                 12+ Years Experience | Chartered Accountants
               </span>
             </div>
 
             <h1 className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              Financial Excellence
-              <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                Beyond Numbers
+              M GHOSH {" "}
+              <span className="inline-block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                & CO.
               </span>
             </h1>
 
+            <h2>
+               <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent text-2xl">
+                Chartered Accountants
+              </span>
+            </h2>
+
             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
-              M Ghosh & Co. provides trusted Statutory & Internal Audits,
+               Provides trusted Statutory & Internal Audits,
               International Accounting (US Form 1120/1040, QuickBooks, Odoo),
               PF, ESI & Professional Tax Consultancy, and Corporate Advisory
               with uncompromising integrity and precision.

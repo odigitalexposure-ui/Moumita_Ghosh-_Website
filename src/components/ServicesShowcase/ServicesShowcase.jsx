@@ -133,13 +133,7 @@ const ServicesShowcase = () => {
       {/* 1. MAJOR EXPANDED AUDITS & ASSURANCE SECTION */}
       <AuditsSection />
 
-      {/* 2. DEDICATED INTERNATIONAL ACCOUNTING & TAXATION */}
-      <InternationalAccounting />
-
-      {/* 3. DEDICATED PF, ESI & PROFESSIONAL TAX (P.TAX) CONSULTANCY */}
-      <StatutoryPayroll />
-
-      {/* 4. ADDITIONAL CORE SERVICES: TAXATION, NGO, CORPORATE LAW, ADVISORY */}
+       {/* 2. ADDITIONAL CORE SERVICES: TAXATION, NGO, CORPORATE LAW, ADVISORY */}
       <section
         id="corporate-taxation"
         className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-indigo-50/30 py-24"
@@ -222,6 +216,14 @@ const ServicesShowcase = () => {
           </div>
         </div>
       </section>
+
+      {/* 3. DEDICATED INTERNATIONAL ACCOUNTING & TAXATION */}
+      <InternationalAccounting />
+
+      {/* 4. DEDICATED PF, ESI & PROFESSIONAL TAX (P.TAX) CONSULTANCY */}
+      <StatutoryPayroll />
+
+     
 
       {/* 5. DUAL PHONE CONSULTATION CTA */}
       <section className="bg-gradient-to-r from-[#12345B] via-slate-900 to-[#0B5D4B] py-16 text-white">

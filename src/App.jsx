@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import FloatingContact from "./components/FloatingContact/FloatingContact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <FloatingContact />
     </BrowserRouter>
   );
 }

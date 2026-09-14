@@ -30,25 +30,27 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-amber-400/40 bg-white/10 px-4 py-1.5 backdrop-blur-xl">
-              <BadgeCheck className="text-amber-400" size={38} />
-              <span className="text-s font-bold uppercase tracking-wider text-amber-200">
-                12+ Years Experience | Chartered Accountants
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-white/10 px-4 py-1.5 backdrop-blur-xl shadow-lg">
+              <BadgeCheck className="text-amber-400 shrink-0" size={18} />
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200">
+                12+ Years Experience • Audits &amp; Advisory
               </span>
             </div>
 
-            <h1 className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              M GHOSH {" "}
-              <span className="inline-block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                & CO.
+            <h1 className="font-cinzel mt-6 text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-extrabold tracking-[0.03em] sm:tracking-[0.05em] leading-[1.1] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)]">
+              M GHOSH{" "}
+              <span className="inline-block bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_4px_25px_rgba(245,158,11,0.4)]">
+                &amp; CO.
               </span>
             </h1>
 
-            <h2>
-               <span className="block bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 bg-clip-text text-transparent text-2xl">
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-[2px] w-6 sm:w-10 bg-gradient-to-r from-amber-400 to-transparent rounded-full" />
+              <h2 className="font-cinzel text-base sm:text-lg md:text-xl font-bold uppercase tracking-[0.25em] text-amber-300 drop-shadow-[0_2px_12px_rgba(245,158,11,0.4)]">
                 Chartered Accountants
-              </span>
-            </h2>
+              </h2>
+              <span className="h-[2px] w-6 sm:w-10 bg-gradient-to-l from-amber-400 to-transparent rounded-full" />
+            </div>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
                Provides trusted Statutory & Internal Audits,
